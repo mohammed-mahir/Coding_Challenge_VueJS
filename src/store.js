@@ -17,6 +17,7 @@ const todos = {
   mutations: {
     inserTodo: (state, todo) => state.todoList.unshift(todo),
     removeTodo: (state, id) => state.todoList = state.todoList.filter(t => t.id !== id),
+    updateTodo: (state, updateTodoObj) => state.todoList.find(t => t.id === updateTodoObj.id)[updateTodoObj.prop] = updateTodoObj.value
   },
   actions: {
     addTodo: ({ commit }, todo) => {
@@ -24,6 +25,9 @@ const todos = {
     },
     deleteTodo: ({ commit }, id) => {
       commit('removeTodo', id)
+    },
+    markAsCompleted: ({commit}, id) => {
+      commit('updateTodo', { id: id, prop: 'completed', value: true })
     }
   },
   getters: {

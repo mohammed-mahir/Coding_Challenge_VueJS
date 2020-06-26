@@ -5,10 +5,13 @@
       :key='item.id'>
       <v-card-title primary-title>
         <div>
-          <h3 class="headline mb-0">{{ item.title }}</h3>
+          <h3 :class="{ completed: item.completed, headline: true, 'mb-0': true }">{{ item.title }}</h3>
         </div>
       </v-card-title>
-      <v-btn>
+      <v-btn 
+        @click="markAsCompleted(item.id)"
+        :disabled="item.completed"
+      >
         Complete
       </v-btn>
       <v-btn 
@@ -28,10 +31,13 @@ export default {
     ...mapGetters(["allTodos"])
   },
   methods: {
-    ...mapActions(["deleteTodo"])
+    ...mapActions(["deleteTodo", "markAsCompleted"])
   }
 }
 </script>
 
 <style lang="css">
+.completed {
+  text-decoration: line-through;
+}
 </style>
