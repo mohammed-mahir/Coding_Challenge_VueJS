@@ -9,21 +9,18 @@ const todos = {
     todoList: [
       {
         id: 1,
-        title: 'Title 1',
-        completed: false
-      },
-      {
-        id: 2,
-        title: 'Title 2',
+        title: 'Title',
         completed: false
       }
     ]
   },
   mutations: {
-
+    inserTodo: (state, todo) => state.todoList.unshift(todo)
   },
   actions: {
-    
+    addTodo: ({ commit }, todo) => {
+      commit('inserTodo', { ...todo, completed: false })
+    }
   },
   getters: {
     allTodos: (state) => state.todoList

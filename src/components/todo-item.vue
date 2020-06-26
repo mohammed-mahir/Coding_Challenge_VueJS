@@ -21,7 +21,7 @@
 <script>
 import { mapGetters } from "vuex"
 export default {
-    computed: {
+  computed: {
     ...mapGetters(["allTodos"])
   }
 }
