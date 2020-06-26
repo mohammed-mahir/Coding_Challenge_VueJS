@@ -11,7 +11,10 @@
       <v-btn>
         Complete
       </v-btn>
-      <v-btn color="error">
+      <v-btn 
+        color="error"
+        @click="deleteTodo(item.id)"
+      >
         Delete
       </v-btn>
     </v-card>
@@ -19,10 +22,13 @@
 </template>
 
 <script>
-import { mapGetters } from "vuex"
+import { mapGetters, mapActions } from "vuex"
 export default {
   computed: {
     ...mapGetters(["allTodos"])
+  },
+  methods: {
+    ...mapActions(["deleteTodo"])
   }
 }
 </script>

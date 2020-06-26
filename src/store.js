@@ -15,11 +15,15 @@ const todos = {
     ]
   },
   mutations: {
-    inserTodo: (state, todo) => state.todoList.unshift(todo)
+    inserTodo: (state, todo) => state.todoList.unshift(todo),
+    removeTodo: (state, id) => state.todoList = state.todoList.filter(t => t.id !== id),
   },
   actions: {
     addTodo: ({ commit }, todo) => {
       commit('inserTodo', { ...todo, completed: false })
+    },
+    deleteTodo: ({ commit }, id) => {
+      commit('removeTodo', id)
     }
   },
   getters: {
