@@ -10,6 +10,12 @@
 
 <script>
 import { mapActions } from "vuex"
+
+/**
+ * @vue-data {string} title - Todo Title
+ * @vue-data {number} IDsCounter - Counter for Todo's id value
+ * @vue-event {Function} enterClicked - Event triggered when user presses enter to add new Todo
+ */
 export default {
   data() {
     return {

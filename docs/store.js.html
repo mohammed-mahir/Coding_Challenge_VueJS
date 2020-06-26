@@ -1,4 +1,32 @@
-import Vue from 'vue'
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: store.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: store.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import Vue from 'vue'
 import Vuex from 'vuex'
 
 Vue.use(Vuex)
@@ -12,7 +40,7 @@ const todos = {
   state: {
 
     /**
-     * @member {Array<{id: number, title: string, completed: boolean}>} todoList List of Todos
+     * @member {Array&lt;{id: number, title: string, completed: boolean}>} todoList List of Todos
      */
     todoList: [
       {
@@ -83,3 +111,22 @@ export default new Vuex.Store({
     todosList: todos
   }
 })
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Todos</a></h2><h3>Modules</h3><ul><li><a href="module-todo-form.html">todo-form</a></li></ul><h3>Global</h3><ul><li><a href="global.html#addTodo">addTodo</a></li><li><a href="global.html#allTodos">allTodos</a></li><li><a href="global.html#deleteTodo">deleteTodo</a></li><li><a href="global.html#inserTodo">inserTodo</a></li><li><a href="global.html#markAsCompleted">markAsCompleted</a></li><li><a href="global.html#removeTodo">removeTodo</a></li><li><a href="global.html#todoList">todoList</a></li><li><a href="global.html#todos">todos</a></li><li><a href="global.html#updateTodo">updateTodo</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
