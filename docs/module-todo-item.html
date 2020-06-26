@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Module: todo-form</title>
+    <title>JSDoc: Module: todo-item</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Module: todo-form</h1>
+    <h1 class="page-title">Module: todo-item</h1>
 
     
 
@@ -43,25 +43,23 @@
 
 
 
-<h3 class="subsection-title" style="margin-top: 1em" data-jsdoc-vuejs="section-data">Data</h3>
-<table data-jsdoc-vuejs="table-data">
+
+
+<h3 class="subsection-title" style="margin-top: 1em" data-jsdoc-vuejs="section-computed">Computed</h3>
+<table data-jsdoc-vuejs="table-computed">
     <thead>
     <tr>
         <th>Name</th>
         <th>Type</th>
-        <th>Default value</th>
         <th>Description</th>
     </tr>
     </thead>
     <tbody><tr>
-        <td><code>todo</code></td>
+        <td><code>todos</code></td>
         <td>object</td>
-        <td>-</td>
-        <td>Todo object for the insertion form</td>
+        <td>List of all Todos</td>
     </tr></tbody>
 </table>
-
-
 
 
 
@@ -76,9 +74,13 @@
     </tr>
     </thead>
     <tbody><tr>
-        <td><code>enterClicked</code></td>
+        <td><code>markAsCompleted</code></td>
         <td>function</td>
-        <td>Event triggered when user presses enter to add new Todo</td>
+        <td>Event triggered when user presses 'Complete' button to update Todo's status</td>
+    </tr><tr>
+        <td><code>deleteTodo</code></td>
+        <td>function</td>
+        <td>Event triggered when user presses 'Delete' button to delete a Todo</td>
     </tr></tbody>
 </table>
 

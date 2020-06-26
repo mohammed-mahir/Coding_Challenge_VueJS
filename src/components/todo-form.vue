@@ -3,32 +3,31 @@
     label="Todo"
     placeholder="What do you have to do?"
     solo
-    v-model='title'
+    v-model='todo.title'
     @keyup.enter="enterClicked()"
   />
 </template>
 
 <script>
-import { mapActions } from "vuex"
+import Todo from "../classes/Todo"
 
 /**
- * @vue-data {string} title - Todo Title
- * @vue-data {number} IDsCounter - Counter for Todo's id value
+ * @vue-data {object} todo - Todo object for the insertion form
  * @vue-event {Function} enterClicked - Event triggered when user presses enter to add new Todo
  */
 export default {
   data() {
     return {
-      title: "",
-      IDsCounter: 1
-    };
+      todo: {
+        title: ""
+      }
+    }
   },
   methods: {
-    ...mapActions(["addTodo"]),
     enterClicked() {
-      if (this.title !== "") {
-        this.addTodo({ id: ++this.IDsCounter, title: this.title });
-        this.title = "";
+      if (this.todo.title !== "") {
+        Todo.insert({ data: this.todo })
+        this.todo.title = '';
       }
     }
   }
