@@ -1,7 +1,6 @@
 <template lang="html">
   <div>
     <TodoItem class="mb-3" />
-    <TodoItem class="mb-3"/>
   </div>
 </template>
 
