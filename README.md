@@ -63,3 +63,12 @@ npm run build
 ```
 npm run lint
 ```
+
+## Changes Summary
+- Create Vuex Module.
+- Complete the CRUD features:
+    •  Add todo: is done by pressing the 'Enter' key after adding the title (Empty title is not accepted).
+    •  Delete todo: by pressing 'Delete' Button.
+    •  Update todo: sets the todo as completed by pressing 'Complete' button, as a result the title gets a strikethrough in the todo-list and the  'Complete' button gets disabled.
+- Refractor the application to use Vuex-ORM.
+- Create a documentation for the application using jsDoc.
